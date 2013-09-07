@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <script src="./media/jquery-2.0.3.min.js"></script>
+    <script src="./media/gauge.min.js"></script>
+    <script src="./media/spin.min.js"></script>
+    <script src="./media/handlebars.js"></script>
+    <script src="./media/loads.js"></script>
+    <link href="./media/loads.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">
+        <img src="./media/logo.png" id="logo"></img><h1>Loads cluster</h1>
+      </a>
+    </div>
+    <div class="content">
+
+<div id="agents">
+  Powered by 10 agents.
+</div>
+
+<div id="active">
+
+<h3 id="active-title">Active Runs</h3>
+ <span id="norun">
+  Nothing is running.
+ </span>
+</div>
+
+<div style="clear: both"></div>
+
+<h3>Stored Runs</h3>
+<table class="stored">
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Duration</th>
+      <th>Finished</th>
+    </tr>
+  </thead>
+  <tbody id="stored">
+  <tr id="inactive-a24b9aa3-28de-45a3-b29e-e11e8fb2ad72" class="red">
+    <td><a href="./run/a24b9aa3-28de-45a3-b29e-e11e8fb2ad72"><span class="status red"></span>load_gen.TestLoad.test_all</a></td>
+    <td>6 min and 15 sec.</td>
+    <td>2 h ago</td>
+  </tr>
+  <tr id="inactive-90a61489-7aec-41f3-bed2-fbcdaff79644" class="green">
+    <td><a href="./run/90a61489-7aec-41f3-bed2-fbcdaff79644"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_gonuts</a></td>
+    <td>12 sec</td>
+    <td>21 h ago</td>
+  </tr>
+  <tr id="inactive-904bf72a-d9bf-46e7-8d2e-ede0d7b45001" class="green">
+    <td><a href="./run/904bf72a-d9bf-46e7-8d2e-ede0d7b45001"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_gonuts</a></td>
+    <td>10 sec</td>
+    <td>21 h ago</td>
+  </tr>
+  <tr id="inactive-294181be-a5d5-4520-9946-af5f9fc14acb" class="green">
+    <td><a href="./run/294181be-a5d5-4520-9946-af5f9fc14acb"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_gonuts</a></td>
+    <td>8 min and 17 sec.</td>
+    <td>22 h ago</td>
+  </tr>
+  <tr id="inactive-0acea6a9-fb63-4462-9ae1-6de91cf6e44c" class="green">
+    <td><a href="./run/0acea6a9-fb63-4462-9ae1-6de91cf6e44c"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_gonuts</a></td>
+    <td>6 min and 26 sec.</td>
+    <td>22 h ago</td>
+  </tr>
+  <tr id="inactive-ece020de-7009-4333-8b5c-e003b10d412b" class="green">
+    <td><a href="./run/ece020de-7009-4333-8b5c-e003b10d412b"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_gonuts</a></td>
+    <td>3 sec</td>
+    <td>22 h ago</td>
+  </tr>
+  <tr id="inactive-3335950b-604c-438d-8afe-5097d7ba9e17" class="green">
+    <td><a href="./run/3335950b-604c-438d-8afe-5097d7ba9e17"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_public</a></td>
+    <td>33 sec</td>
+    <td>15 min ago</td>
+  </tr>
+  <tr id="inactive-91a776e9-c683-4fc8-bc07-5d4977f01ee0" class="green">
+    <td><a href="./run/91a776e9-c683-4fc8-bc07-5d4977f01ee0"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_public</a></td>
+    <td>13 sec</td>
+    <td>17 min ago</td>
+  </tr>
+  <tr id="inactive-6b5c08cd-ac27-4708-8fec-4eed16704351" class="green">
+    <td><a href="./run/6b5c08cd-ac27-4708-8fec-4eed16704351"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_public</a></td>
+    <td>11 sec</td>
+    <td>17 min ago</td>
+  </tr>
+  <tr id="inactive-518af1a2-bd67-4134-bfe2-0991f5698e99" class="green">
+    <td><a href="./run/518af1a2-bd67-4134-bfe2-0991f5698e99"><span class="status green"></span>loads.examples.test_blog.TestWebSite.test_public</a></td>
+    <td>16 sec</td>
+    <td>21 h ago</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<script>
+  $(document).ready(function() {
+    initStatusSocket("ws://loads.services.mozilla.com:8080/status/websocket");
+  });
+</script>
+    </div>
+    <div class="footer">
+    © Copyright 2013, Mozilla Services.
+    </div>
+  </body>
+</html>

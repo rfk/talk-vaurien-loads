@@ -1,0 +1,279 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+
+    <title>APIs &mdash; Vaurien 1.8 documentation</title>
+<!-- RTD <head> -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="//media.readthedocs.org/javascript/underscore.js"></script>
+<script type="text/javascript" src="//media.readthedocs.org/javascript/doctools.js"></script>
+
+<script type="text/javascript">
+  // This is included here for Javascript that doesn't have access to the templates.
+  var doc_version = "latest";
+  var doc_slug = "vaurien";
+</script>
+
+<script type="text/javascript" src="//media.readthedocs.org/javascript/rtd.js"></script>
+<!-- end RTD <head> -->
+
+    
+    <link rel="stylesheet" href="_static/mozilla.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.8',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <link rel="top" title="Vaurien 1.8 documentation" href="index.html" />
+    <link rel="next" title="Extending Vaurien" href="extending.html" />
+    <link rel="prev" title="Protocols" href="protocols.html" /> 
+  </head>
+  <body><a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+
+    <div class="document">
+  <div class="documentwrapper">
+    
+    <div class="sphinxsidebar">
+        <nav>
+        <h2><a href="index.html">Vaurien</a></h2>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="behaviors.html">Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocols.html">Protocols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-rest-api">The REST API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Vaurien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+        </nav>
+    </div>
+    <div class="bodywrapper">
+      <div class="body">
+        
+  <div class="section" id="apis">
+<span id="id1"></span><h1>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h1>
+<p>You can control vaurien from its APIs. There is a REST API and a command-line
+API</p>
+<div class="section" id="the-rest-api">
+<h2>The REST API<a class="headerlink" href="#the-rest-api" title="Permalink to this headline">¶</a></h2>
+<p><strong>GET</strong> <strong>/behavior</strong></p>
+<blockquote>
+<div><p>Returns the current behavior in use, as a json object.</p>
+<p>Example:</p>
+<div class="highlight-python"><pre>$ curl -XGET http://localhost:8080/behavior
+{
+  "behavior": "dummy"
+}</pre>
+</div>
+</div></blockquote>
+<p><strong>PUT</strong> <strong>/behavior</strong></p>
+<blockquote>
+<div><p>Set the behavior. The behavior must be provided in a JSON object,
+in the body of the request, with a <strong>name</strong> key for the behavior
+name, and any option to pass to the behavior class.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Don&#8217;t forget to set the &#8220;application/json&#8221; Content-Type header
+when doing your calls.</p>
+</div>
+<p>Example:</p>
+<div class="highlight-python"><pre>$ curl -XPUT -d '{"sleep": 2, "name": "delay"}' http://localhost:8080/behavior \
+       -H "Content-Type: application/json"
+ {
+   "status": "ok"
+ }</pre>
+</div>
+</div></blockquote>
+<p><strong>GET</strong> <strong>/behaviors</strong></p>
+<blockquote>
+<div><p>Returns a list of behaviors that are possible to use</p>
+<p>Example:</p>
+<div class="highlight-python"><pre>$ curl -XGET http://localhost:8080/behaviors
+{
+"behaviors": [
+    "blackout",
+    "delay",
+    "dummy",
+    "error",
+    "hang"
+]
+}</pre>
+</div>
+</div></blockquote>
+<p>If you want to control vaurien from the command-line, you can do so by using
+<a class="reference external" href="http://github.com/mozilla-services/vaurienclient">vaurienclient</a>.
+<cite>vaurienctl &#8211;help</cite> will provide you some help.</p>
+</div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+      <div class="clearer"></div>
+    </div>
+  
+
+ 
+    <div class="footer">
+        &copy; Copyright 2012, Mozilla.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div> <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script> 
+ <!-- End original user content -->
+
+
+<br>
+<br>
+<br>
+
+
+<style type="text/css">
+  .rtd-badge {
+    position: fixed;
+    display: block;
+    bottom: 5px;
+    height: 40px;
+    text-indent: -9999em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  #version_menu {
+    position: fixed;
+    display: none;
+    bottom: 11px;
+    right: 166px;
+    list-style-type: none;
+    margin: 0;
+  }
+  .footer_popout:hover #version_menu {
+    display: block;
+  }
+  #version_menu li {
+    display: block;
+    float: right;
+  }
+  #version_menu li a {
+    display: block;
+    padding: 6px 10px 4px 10px;
+    margin: 7px 7px 0 0;
+    font-weight: bold;
+    font-size: 14px;
+    height: 20px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #fff;
+    background: #8ca1af url(../images/gradient-light.png) bottom left repeat-x;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 1px #465158;
+    -moz-box-shadow: 0 1px 1px #465158;
+    -webkit-box-shadow: 0 1px 1px #465158;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  #version_menu li a:hover {
+    text-decoration: none;
+    background-color: #697983;
+    box-shadow: 0 1px 0px #465158;
+    -moz-box-shadow: 0 1px 0px #465158;
+    -webkit-box-shadow: 0 1px 0px #465158;
+  }
+  .rtd-badge.rtd {
+    background: #3b4449 url(//media.readthedocs.org//images/badge-rtd.png) scroll 0px -46px no-repeat;
+    border: 1px solid #282E32;
+    width: 41px;
+    right: 5px;
+  }
+  .footer_popout:hover .rtd-badge.rtd {
+    background-position: top left;
+    width: 160px;
+  }
+  .rtd-badge.revsys { background: #465158 url(//media.readthedocs.org//images/badge-revsys.png) top left no-repeat;
+    border: 1px solid #1C5871;
+    width: 290px;
+    right: 173px;
+  }
+  .rtd-badge.revsys-inline-sponsored {
+    position: inherit;
+    margin-left: auto;
+    margin-right: 175px;
+    margin-bottom: 5px;
+    background: #465158 url(//media.readthedocs.org//images/badge-revsys.png) top left no-repeat;
+    border: 1px solid #1C5871;
+    width: 290px;
+    right: 173px;
+  }
+  .rtd-badge.revsys-inline {
+    position: inherit;
+    margin-left: auto;
+    margin-right: 175px;
+    margin-bottom: 5px;
+    background: #465158 url(//media.readthedocs.org//images/badge-revsys-sm.png) top left no-repeat;
+    border: 1px solid #1C5871;
+    width: 205px;
+    right: 173px;
+  }
+
+</style>
+<div class="rtd_doc_footer">
+  <div class="footer_popout">
+    <a href="//readthedocs.org/projects/vaurien/?fromdocs=vaurien" class="rtd-badge rtd"> Brought to you by Read the Docs</a>
+    <ul id="version_menu">
+      
+        <li><a href="/en/latest/">latest</a></li>
+      
+        <li><a href="/en/1.8/">1.8</a></li>
+      
+        <li><a href="/en/1.7/">1.7</a></li>
+      
+        <li><a href="/en/1.5/">1.5</a></li>
+      
+        <li><a href="/en/1.4/">1.4</a></li>
+      
+        <li><a href="/en/1.3/">1.3</a></li>
+      
+        <li><a href="/en/0.5/">0.5</a></li>
+      
+        <li><a href="/en/0.4/">0.4</a></li>
+      
+        <li><a href="/en/0.1/">0.1</a></li>
+      
+    </ul>
+  </div>
+</div>
+<!-- RTD Analytics Code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+  </body>
+</html>

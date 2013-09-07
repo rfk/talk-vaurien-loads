@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <script src="../media/jquery-2.0.3.min.js"></script>
+    <script src="../media/gauge.min.js"></script>
+    <script src="../media/spin.min.js"></script>
+    <script src="../media/handlebars.js"></script>
+    <script src="../media/loads.js"></script>
+    <link href="../media/loads.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">
+        <img src="../media/logo.png" id="logo"></img><h1>Loads cluster</h1>
+      </a>
+    </div>
+    <div class="content">
+
+
+<p>Testing <strong>loads.examples.test_blog.TestWebSite.test_gonuts</strong></p>
+
+<dl id="summary">
+  <h3>Status</h3>
+
+  <dt>Run Id</dt>
+  <dd>ece020de-7009-4333-8b5c-e003b10d412b</dd>
+
+  <dt>Duration</dt>
+  <dd id='count-elapsed'>3 sec</dd>
+
+  <dt>Started</dt>
+  <dd>2013-09-04 12:24:04</dd>
+
+  <dt>State</dt>
+  <dd id='state'>Ended</dd>
+
+  <h3>Configuration</h3>
+
+  <dt>Users</dt>
+  <dd>[1]</dd>
+
+  <dt>Hits</dt>
+  <dd>[1]</dd>
+
+  <dt>Agents</dt>
+  <dd>1</dd>
+
+  <dt>Duration</dt>
+  <dd>None</dd>
+
+</dl>
+
+
+<dl id="results">
+
+ <h3>Results</h3>
+ <dt>Tests done</dt>
+ <dd id="count-stopTest">0
+ </dd>
+
+ <dt>Successes</dt>
+ <dd id="count-addSuccess">1</dd>
+ <dt>Failures</dt>
+ <dd id="count-addFailure">0</dd>
+
+ <dt>Errors</dt>
+ <dd id="count-addError">0</dd>
+
+ <dt>TCP Hits</dt>
+ <dd id="count-add_hit">1</dd>
+
+ <dt>Opened web sockets</dt>
+ <dd id="count-socket_open">0</dd>
+ <dt>Total web sockets</dt>
+ <dd id="xcount-socket_open">0</dd>
+
+ <dt>Bytes/websockets</dt>
+ <dd id="count-socket_message">0</dd>
+
+
+
+<div id="errors">
+<h3>Errors</h3>
+
+</div>
+
+    </div>
+    <div class="footer">
+    © Copyright 2013, Mozilla Services.
+    </div>
+  </body>
+</html>

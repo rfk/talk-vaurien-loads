@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <script src="../media/jquery-2.0.3.min.js"></script>
+    <script src="../media/gauge.min.js"></script>
+    <script src="../media/spin.min.js"></script>
+    <script src="../media/handlebars.js"></script>
+    <script src="../media/loads.js"></script>
+    <link href="../media/loads.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">
+        <img src="../media/logo.png" id="logo"></img><h1>Loads cluster</h1>
+      </a>
+    </div>
+    <div class="content">
+
+
+<p>Testing <strong>load_gen.TestLoad.test_all</strong></p>
+
+<dl id="summary">
+  <h3>Status</h3>
+
+  <dt>Run Id</dt>
+  <dd>a24b9aa3-28de-45a3-b29e-e11e8fb2ad72</dd>
+
+  <dt>Duration</dt>
+  <dd id='count-elapsed'>6 min and 15 sec.</dd>
+
+  <dt>Started</dt>
+  <dd>2013-09-05 08:10:49</dd>
+
+  <dt>State</dt>
+  <dd id='state'>Ended</dd>
+
+  <h3>Configuration</h3>
+
+  <dt>Users</dt>
+  <dd>[100]</dd>
+
+  <dt>Hits</dt>
+  <dd>None</dd>
+
+  <dt>Agents</dt>
+  <dd>10</dd>
+
+  <dt>Duration</dt>
+  <dd>120</dd>
+
+</dl>
+
+
+<dl id="results">
+
+ <h3>Results</h3>
+ <dt>Tests done</dt>
+ <dd id="count-stopTest">1000
+ </dd>
+
+ <dt>Successes</dt>
+ <dd id="count-addSuccess">0</dd>
+ <dt>Failures</dt>
+ <dd id="count-addFailure">0</dd>
+
+ <dt>Errors</dt>
+ <dd id="count-addError">110512</dd>
+
+ <dt>TCP Hits</dt>
+ <dd id="count-add_hit">0</dd>
+
+ <dt>Opened web sockets</dt>
+ <dd id="count-socket_open">0</dd>
+ <dt>Total web sockets</dt>
+ <dd id="xcount-socket_open">0</dd>
+
+ <dt>Bytes/websockets</dt>
+ <dd id="count-socket_message">0</dd>
+
+
+
+<div id="errors">
+<h3>Errors</h3>
+
+  <div id="error-c8fbe6cfc8754aa51b4c9bae5090ebb8">
+    <strong><span id="error-c8fbe6cfc8754aa51b4c9bae5090ebb8-count">32</span>
+            occurrences:
+    </strong>
+
+    <pre>[Errno 111] Connection refused
+  File &quot;/usr/lib/python2.7/unittest/case.py&quot;, line 332, in run
+    testMethod()
+  File &quot;load_gen.py&quot;, line 153, in test_all
+    random.choice(self.choices)()
+  File &quot;load_gen.py&quot;, line 89, in test_one_chan
+    ws.connect()
+  File &quot;/home/ubuntu/loads/local/lib/python2.7/site-packages/ws4py/client/__init__.py&quot;, line 110, in connect
+    self.sock.connect((self.host, int(self.port)))
+  File &quot;/home/ubuntu/loads/local/lib/python2.7/site-packages/gevent/socket.py&quot;, line 342, in connect
+    raise error(err, strerror(err))
+</pre>
+  </div>
+</div>
+
+    </div>
+    <div class="footer">
+    © Copyright 2013, Mozilla Services.
+    </div>
+  </body>
+</html>

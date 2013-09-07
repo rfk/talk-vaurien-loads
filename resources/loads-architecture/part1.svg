@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="23cm" height="13cm" viewBox="71 32 448 246" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="73" y="34" width="445" height="243"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" x="73" y="34" width="445" height="243"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="104" y="131" width="68" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="104" y="131" width="68" height="47"/>
+  </g>
+  <text font-size="13.5467" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="138" y="154.5">
+    <tspan x="138" y="154.5">runner</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="410.8" y="130.4" width="68.2" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="410.8" y="130.4" width="68.2" height="47"/>
+  </g>
+  <text font-size="13.5467" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="444.9" y="153.9">
+    <tspan x="444.9" y="153.9">server</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="172" y1="154.5" x2="401.064" y2="153.924"/>
+    <polygon style="fill: #000000" points="408.564,153.906 398.577,158.931 401.064,153.924 398.551,148.931 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="408.564,153.906 398.577,158.931 401.064,153.924 398.551,148.931 "/>
+  </g>
+</svg>
